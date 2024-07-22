@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+  fastapi-app:
+    image: fastapi-app:latest
+    ports:
+      - 8000:8000
+  golang-app:
+    image: golang-app:latest
+    ports:
+      - 8080:8080
+      - 8081:8081

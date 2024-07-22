@@ -1,0 +1,5 @@
+name: fastapi-red
+channels:
+  - conda-forge
+dependencies:
+  - pip
